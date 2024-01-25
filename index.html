@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/style/normalize.css">
+    <link rel="stylesheet" href="static/style/body.css">
+    <link rel="stylesheet" href="static/style/header.css">
+    <link rel="stylesheet" href="static/style/div.css">
+    <link rel="stylesheet" href="static/style/form.css">
+</head>
+
+<body style="background-color:rgb(1, 4, 15);">
+    <video src="./static/video/sea.mp4" type="video/mp4" autoplay muted loop
+        style="height:115vh; width:100%; position:absolute; top:0; left:0; z-index:0; object-fit:cover;">Video</video>
+
+    <header style="z-index:2; position:fixed; top:0; align-self:center;">
+        <div class="accordion-item">
+            <label class="accordion-item_trigger" for="accordion-1">Oracle menu</label>
+            <input class="accordion-item_input" type="checkbox" id="accordion-1">
+            <div class="accordion-item_content">
+                <div class="button-menu" style="margin-top:-2.5px;">
+                    <button class="btn primary" name="button-primary" style="margin-left:0;">Главная</button>
+                    <button class="btn ato" name="button-ato">Об Оракуле</button>
+                    <button class="btn askto" name="button-askto">Спросить у Оракула</button>
+                    <button class="btn op" name="button-opinion">Оценить мнение</button>
+                    <button class="btn conf" name="button-conference">Оценить совещание</button>
+                </div>
+            </div>
+        </div>
+        <div class="btn-title" style="display:flex; justify-content:center; align-items:flex-end; align-self:stretch;">
+            <button class="btn back none"
+                style=" font-size:clamp(8px,1.5vw, 36px); margin-right:20px; margin-left:0;  padding:5px;">&#9668
+                Back</button>
+            <p class="title">“To be, or not to be, that is the question:”</p>
+            <button class="btn next none" style=" font-size:clamp(8px,1.5vw, 36px); margin-left:20px; padding:5px;">Next
+                &#9658</button>
+        </div>
+    </header>
+
+    <section style="z-index:1; position:relative; margin-top:6%; height:100vw;">
+        <left-sidebar>
+            <!-- left-sidebar -->
+        </left-sidebar>
+        <div class="field">
+            <div class="text1 TextPrimary a0 flex" id="a0" style="margin-top:-7.5vw;">
+                <p>...если ты обращаешься к Оракулу, значит ты ищешь ответ...</p>
+                <br>
+                <p>Малая доля всех ответов логична.</p>
+                <br>
+                <p>Логика извлекает ответ извне, она опирается на исходные посылки.</p>
+                <br>
+                <p>Логика подразумевает полное знание.</p>
+                <br>
+                <br>
+                <p>Полное знание не существует и не существовало никогда.</p>
+                <br>
+                <p>Существует лишь непонимание и иллюзия осведомленности.</p>
+                <br>
+                <p style="margin-left:2vw; text-align: left;">Неосведомленный настолько не осведомлён,</p>
+                <br>
+                <p style="margin-left:4vw; text-align: right;">что он не понимает, что он не осведомлён.</p>
+                <br>
+                <p>Ответ извне введет тебя в заблуждение. Твое знание внутри тебя.</p>
+                <br>
+                <p>Спроси у Оракула!</p>
+                <br>
+                <p>Найди ответ в себе.</p>
+                <br>
+                <p>Прочувствуй решение.</p>
+            </div>
+
+            <div class="text1 AboutTheOracle a1 none" id="a1" style="margin-top:-7.5vw;">
+                <p>Оракул - инструмент,</p>
+                <br>
+                <p>позволяющий тебе найти решение в состоянии неведения,</p>
+                <br>
+                <p>Оракул даст ответ в условиях неопределенности.</p>
+                <br>
+                <p>Используй логику если тебе известно все.</p>
+                <br>
+                <p>Если ты погружен в ложь и заблуждения,</p>
+                <br>
+                <p>"логическое" решение приведет тебя к самообману.</p>
+                <br>
+                <p>Доверься своим ощущениям!</p>
+                <br>
+                <p>НЕ ПЫТАЙСЯ ПОНЯТЬ! НАЧНИ ЧУВСТВОВАТЬ!</p>
+                <br>
+                <p>Попробуй прочувствовать решение.</p>
+                <br>
+                <p>Оракул научит тебя этому.</p>
+                <br>
+                <br>
+                <p>Правильно задавай Оракулу вопросы!</p>
+                <br>
+                <p>Правильный вопрос - вопрос для которого положительный ответ</p>
+                <br>
+                <p>совпадает с положительным исходом для вопрошающего!</p>
+
+            </div>
+
+            <!-- QUESTION -->
+            <div class="div-question none">
+                <form action="#" class="form-question">
+                    <fieldset class="question-fieldset">
+                        <legend style="font-size:clamp(8px,1.5vw, 48px);">Ты можешь задать однозначный вопрос Оракулу!
+                        </legend>
+                        <textarea name="question" class="text question1" id="question1"
+                            placeholder="Задай Оракулу однозначный вопрос!" autofocus
+                            style="-webkit-text-stroke: 1px rgb(255, 0, 242);"></textarea>
+                    </fieldset>
+                </form>
+            </div>
+
+            <!-- MOOD -->
+            <div class="div-ask none">
+                <form action="#" class="form-ask">
+                    <fieldset class="confidence-fieldset">
+                        <legend style="font-size:clamp(8px,1.5vw, 48px);">Оцени свое настроение и заполни им Or</legend>
+                        <div class="wrap_input_range" id="wrap_input_range">
+                            <div class="tbontb">
+                                <p
+                                    style="font-size:clamp(8px,3vw, 48px); color:rgba(3, 53, 53, 0.5); padding-left:10px;">
+                                    To be</p>
+                                <p class="or" style="padding-left:20px;"><i
+                                        style="font-size:clamp(8px,3.5vw, 48px); display:inline-block; vertical-align: middle; margin-left:0;">Or</i>
+                                </p>
+                                <p
+                                    style="font-size:clamp(8px,3vw, 48px); color: rgba(127, 255, 212, 0.5); padding-right:10px;">
+                                    Not to
+                                    be</p>
+                            </div>
+
+                            <form action="#" class="form-color">
+                                <input type="range" class="input_color color_01" id="color_01" min="0" max="256"
+                                    value="128">
+                            </form>
+
+                        </div>
+
+                    </fieldset>
+                </form>
+            </div>
+
+            <!--CONFIDENCE  -->
+            <div class="div-confidence none">
+                <form action="#" class="form-ask">
+                    <fieldset class="confidence-fieldset">
+                        <legend style="font-size:clamp(8px,1.5vw, 48px);">Передай Оракулу свою уверенность в
+                            положительном решении!</legend>
+                        <div class="wrap_input_range" id="wrap_input_range">
+                            <div class="tbontb">
+                                <p
+                                    style="font-size:clamp(8px,3vw, 48px); color:rgba(3, 53, 53, 0.5); padding-left:10px;">
+                                    To be</p>
+                                <p class="or1" style="padding-left:20px;"><i
+                                        style="font-size:clamp(8px,3.5vw, 48px); display:inline-block; vertical-align: middle; margin-left:0;">Or</i>
+                                </p>
+                                <p
+                                    style="font-size:clamp(8px,3vw, 48px); color: rgba(127, 255, 212, 0.5); padding-right:10px;">
+                                    Not to
+                                    be</p>
+                            </div>
+                            <form action="#" class="form-color">
+                                <input type="range" class="input_color color_02" id="color_02" min="0" max="256"
+                                    value="128">
+                            </form>
+                        </div>
+
+                    </fieldset>
+
+                </form>
+            </div>
+            <!-- RED -->
+            <div class="div-red none">
+                <form action="#" class="form-red">
+                    <fieldset class="red-fieldset">
+                        <legend style="font-size:clamp(8px,1.5vw, 48px);">Оцени степень риска неправильности оценки
+                            тобою ситуации.
+                        </legend>
+                        <div class="wrap_input_range_red" id="wrap_input_range_red">
+                            <div class="tbontb">
+                                <p
+                                    style="font-size:clamp(8px,3vw, 48px); color:rgba(3, 53, 53, 0.5); padding-left:10px;">
+                                    Высокая</p>
+                                <p class="or2" style="padding-left:20px;"><i
+                                        style="font-size:clamp(8px,3.5vw, 48px); display:inline-block; vertical-align: middle; margin-left:0;">Or</i>
+                                </p>
+                                <p
+                                    style="font-size:clamp(8px,3vw, 48px); color: rgba(49, 40, 215, 0.5); padding-right:30px;">
+                                    Низкая</p>
+                            </div>
+                            <form action="#" class="form-color">
+                                <input type="range" class="input_color color_03" id="color_03" min="0" max="256"
+                                    value="128">
+                            </form>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <!-- GREEN -->
+            <div class="div-green none">
+                <form action="#" class="form-green">
+                    <fieldset class="green-fieldset">
+                        <legend style="font-size:clamp(8px,1.5vw, 48px);">Оцени степень своего доверия к
+                            обстоятельствам!</legend>
+                        <div class="wrap_input_range_green" id="wrap_input_range_green">
+                            <div class="tbontb">
+                                <p
+                                    style="font-size:clamp(8px,3vw, 48px); color:rgba(3, 53, 53, 0.5); padding-left:10px; display:inline-block; text-align:left;">
+                                    Все<br>стабильно</p>
+                                <p class="or3" style="padding-left:20px;"><i
+                                        style="font-size:clamp(8px,3.5vw, 48px); display:inline-block; vertical-align: middle; margin-left:0;">Or</i>
+                                </p>
+                                <p
+                                    style="font-size:clamp(8px,3vw, 48px); color: rgba(250, 67, 47, 0.5); padding-right:10px;  display:inline-block; text-align:right;">
+                                    Все<br>измениться</p>
+                            </div>
+                            <form action="#" class="form-color">
+                                <input type="range" class="input_color color_04" id="color_04" min="0" max="256"
+                                    value="128">
+                            </form>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+
+            <!-- BLUE -->
+            <div class="div-blue none">
+                <form action="#" class="form-blue">
+                    <fieldset class="blue-fieldset">
+                        <legend style="font-size:clamp(8px,1.5vw, 48px);">Оцени степень своей осведмленности!</legend>
+                        <div class="wrap_input_range_blue" id="wrap_input_range_blue">
+                            <div class="tbontb">
+                                <p
+                                    style="font-size:clamp(8px,3vw, 48px); color:rgba(3, 53, 53, 0.5); padding-left:10px;">
+                                    Низкая</p>
+                                <p class="or4" style="padding-left:80px;"><i
+                                        style="font-size:clamp(8px,3.5vw, 48px); display:inline-block; vertical-align: middle; margin-left:0;">Or</i>
+                                </p>
+                                <p
+                                    style="font-size:clamp(8px,3vw, 48px); color: rgba(250, 67, 47, 0.5); padding-right:30px;">
+                                    Высокая</p>
+                            </div>
+
+                            <form action="#" class="form-color">
+                                <input type="range" class="input_color color_05" id="color_05" min="0" max="256"
+                                    value="128">
+                            </form>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <!-- REZ -->
+            <div class="rez none" style="background-color: aqua; border:10px inset white; margin-top:-7.5vw;">
+                <br>
+                <br>
+                <br>
+                <p class="text"></p>
+                <br>
+                <br>
+                <br>
+                <p
+                    style="font-size:clamp(8px,2.5vw, 48px); color:chartreuse; text-shadow: 0 -2px 4px rgb(255, 0, 180);">
+                    Перед тобой ответ.</p>
+                <p
+                    style="font-size:clamp(8px,1.5vw, 48px); color:chartreuse; text-shadow: 0 -2px 4px rgb(255, 0, 180);">
+                    Светлый цвет текста твоего вопроса указывает на положительное решение.</p>
+                <p
+                    style="font-size:clamp(8px,1.5vw, 48px); color:chartreuse; text-shadow: 0 -2px 4px rgb(255, 0, 180);">
+                    Теплые тона фона - высокая степень риска правильности оценки тобою ситуации.</p>
+                <p
+                    style="font-size:clamp(8px,1.5vw, 48px); color:chartreuse; text-shadow: 0 -2px 4px rgb(255, 0, 180);">
+                    Если оранжевый оттенок вокруг вопроса трудно различим и пытается слиться с фоном, ты неправильно
+                    оцениваешь ситуацию!</p>
+                <p
+                    style="font-size:clamp(8px,1.5vw, 48px); color:chartreuse; text-shadow: 0 -2px 4px rgb(255, 0, 180);">
+                    Прозрачность фона - неопределенность.</p>
+                <p
+                    style="font-size:clamp(8px,1.5vw, 48px); color:chartreuse; text-shadow: 0 -2px 4px rgb(255, 0, 180);">
+                    Синие оттенки - непонимание сути вопроса.</p>
+                <p
+                    style="font-size:clamp(8px,1.5vw, 48px); color:chartreuse; text-shadow: 0 -2px 4px rgb(255, 0, 180);">
+                    Зеленые оттенки - доверие к обстоятельствам сопряженными с вопросом.</p>
+                <p
+                    style="font-size:clamp(8px,2.5vw, 48px); color:chartreuse; text-shadow: 0 -2px 4px rgb(255, 0, 180);">
+                    <br>Если тебе нравится картина - поступай как наметил, иначе, измени обстоятельства!
+                </p>
+                <br>
+                <br>
+            </div>
+
+
+            <div class="opinion none">
+                <div class="input-name">
+                    <p style="font-size:clamp(8px,1.5vw, 32px);">Чье мнение оценить?</p>
+                    <input type="text" class="inp-name-opinion" style="font-size:clamp(8px,1.5vw, 32px);"
+                        placeholder="Введи nickname субъекта">
+                    <button class="btn btn-inp-name"
+                        style="margin-left:4px; font-size:clamp(8px,1.5vw, 32px);">Ok!</button>
+                </div>
+                <form action="#" class="form-opinion" style="width:100%;">
+                    <fieldset>
+                        <legend class="legend-op">Оцени мнение Nickname!</legend>
+                        <form action="#" class="form-ask">
+                            <fieldset class="confidence-fieldset">
+                                <legend class="legend-importance" style="font-size:clamp(8px,1.5vw, 48px);">Оцени
+                                    значение вопроса для Nickname</legend>
+                                <div class="wrap_input_range" id="wrap_input_range">
+                                    <div class="tbontb"
+                                        style="max-height:55px; background: linear-gradient(to right, rgb(255,255,255,0.85), rgba(249, 2, 2, 0.85));">
+                                        <p
+                                            style="font-size:clamp(8px,3vw, 48px); color:rgba(3, 53, 53, 0.5); padding-left:10px;">
+                                            Низкое</p>
+                                        <p class="or-07" style="padding-left:20px;"><i
+                                                style="font-size:clamp(8px,3.5vw, 48px); display:inline-block; vertical-align: middle; margin-left:0;">Or</i>
+                                        </p>
+                                        <p
+                                            style="font-size:clamp(8px,3vw, 48px); color: rgba(127, 255, 212, 0.5); padding-right:10px;">
+                                            Высокое</p>
+                                    </div>
+
+                                    <form action="#" class="form-color">
+                                        <input type="range" class="input_color color_07" id="color_07" min="0" max="256"
+                                            value="128">
+                                    </form>
+
+                                </div>
+
+                            </fieldset>
+                        </form>
+
+                        <form action="#" class="form-ask">
+                            <fieldset class="confidence-fieldset">
+                                <legend class="legend-positive" style="font-size:clamp(8px,1.5vw, 48px);">Оцени
+                                    заинтересованность в положительном результате Nickname</legend>
+                                <div class="wrap_input_range" id="wrap_input_range">
+                                    <div class="tbontb"
+                                        style="max-height:55px; background: linear-gradient(to left, rgb(255,255,255,0.85), rgba(0, 0, 0, 0.85));">
+                                        <p
+                                            style="font-size:clamp(8px,3vw, 48px); color:rgba(3, 53, 53, 0.5); padding-left:10px;">
+                                            Не важно</p>
+                                        <p class="or-08" style="padding-left:20px;"><i
+                                                style="font-size:clamp(8px,3.5vw, 48px); display:inline-block; vertical-align: middle; margin-left:-5vw;">Or</i>
+                                        </p>
+                                        <p
+                                            style="font-size:clamp(8px,3vw, 48px); color: rgba(127, 255, 212, 0.5); padding-right:10px;">
+                                            Важно</p>
+                                    </div>
+
+                                    <form action="#" class="form-color">
+                                        <input type="range" class="input_color color_08" id="color_08" min="0" max="256"
+                                            value="128">
+                                    </form>
+
+                                </div>
+
+                            </fieldset>
+                        </form>
+
+                        <form action="#" class="form-ask">
+                            <fieldset class="confidence-fieldset">
+                                <legend class="legend-сompetence" style="font-size:clamp(8px,1.5vw, 48px);">Оцени
+                                    компетентность Nickname</legend>
+                                <div class="wrap_input_range" id="wrap_input_range">
+                                    <div class="tbontb"
+                                        style="max-height:55px; background: linear-gradient(to right, rgb(255,255,255,0.85), rgba(0, 256, 0, 0.85));">
+                                        <p
+                                            style="font-size:clamp(8px,3vw, 48px); color:rgba(3, 53, 53, 0.5); padding-left:10px;">
+                                            Низкая</p>
+                                        <p class="or-09" style="padding-left:20px;"><i
+                                                style="font-size:clamp(8px,3.5vw, 48px); display:inline-block; vertical-align: middle; margin-left:0;">Or</i>
+                                        </p>
+                                        <p
+                                            style="font-size:clamp(8px,3vw, 48px); color: rgba(127, 255, 212, 0.5); padding-right:10px;">
+                                            Высокая</p>
+                                    </div>
+
+                                    <form action="#" class="form-color">
+                                        <input type="range" class="input_color color_09" id="color_09" min="0" max="256"
+                                            value="128">
+                                    </form>
+
+                                </div>
+
+                            </fieldset>
+                        </form>
+
+
+                        <form action="#" class="form-ask">
+                            <fieldset class="confidence-fieldset">
+                                <legend class="legend-ir" style="font-size:clamp(8px,1.5vw, 48px);"> Оцени
+                                    иррациональность (плутовство) Nickname </legend>
+                                <div class="wrap_input_range" id="wrap_input_range">
+                                    <div class="tbontb"
+                                        style="max-height:55px; background: linear-gradient(to right, rgb(255,255,255,0.85), rgba(0, 0, 256, 0.85));">
+                                        <p
+                                            style="font-size:clamp(8px,3vw, 48px); color:rgba(3, 53, 53, 0.5); padding-left:10px;">
+                                            Низкая</p>
+                                        <p class="or-10" style="padding-left:20px;"><i
+                                                style="font-size:clamp(8px,3.5vw, 48px); display:inline-block; vertical-align: middle; margin-left:0;">Or</i>
+                                        </p>
+                                        <p
+                                            style="font-size:clamp(8px,3vw, 48px); color: rgba(127, 255, 212, 0.5); padding-right:10px;">
+                                            Высокая</p>
+                                    </div>
+
+                                    <form action="#" class="form-color">
+                                        <input type="range" class="input_color color_10" id="color_10" min="0" max="256"
+                                            value="128">
+                                    </form>
+
+                                </div>
+
+                            </fieldset>
+
+                        </form>
+                        <button class="btn analiz"
+                            style="margin-left:0; margin-top:20px; float:right; font-size:clamp(8px,1.5vw, 32px);">Анализировать!</button>
+                    </fieldset>
+
+                </form>
+
+            </div>
+            <div class="div-analiz none">
+                <div class="svg" data-tooltip="Всплывающая подсказка \r\n сообщает о чём-то многозначном и полезном...">
+                    <svg viewBox="0.0 0.0 720.0 540.0">
+                        <path class="part" d="m 16.0 92.0
+                        l 0 0
+                        c 0 -41.97364 34.02636 -76.0 76.0 -76.0
+                        l 38.0 0
+                        l 0 0
+                        l 171.0 0
+                        l 323.0 0
+                        c 20.156433 0 39.487366 8.00712 53.740112 22.259884
+                        c 14.252747 14.252766 22.259888 33.58366 22.259888 53.740116
+                        l 0 190.0
+                        l 0 0
+                        l 0 114.0
+                        l 0 0
+                        c 0 41.973633 -34.026367 76.0 -76.0 76.0
+                        l -323.0 0
+                        l -85.49773 57.0
+                        l -85.50227 -57.0
+                        l -38.0 0
+                        c -41.97364 0 -76.0 -34.026367 -76.0 -76.0
+                        l 0 0
+                        l 0 -114.0
+                        l 0 0
+                        z">
+                    </svg>
+                </div>
+                <div class="comment rez">
+                    <p style="margin-top:-15vh;">Теплые тона мыслеформы и непрозразрачный фон говорят о том, что его
+                        мнению можно доверять!</p>
+                </div>
+            </div>
+
+            <!-- Сonference -->
+
+            <div class="conference none">
+
+                <div class="input-name-level">
+                    <p style="font-size:clamp(8px,1.5vw, 32px); display:inline-block;">Участник:</p>
+                    <input type="text" class="inp-name-part" style="font-size:clamp(8px,1.5vw, 32px);"
+                        placeholder="Введи nickname участника">
+                    <select class="level" name="level-participant" required="required">
+                        <option value="">--Значимость участника--</option>
+                        <option value="1.5">Super</option>
+                        <option value="1.2">Высокая</option>
+                        <option value="1">Твоя</option>
+                        <option value="0.75">Низкая</option>
+                    </select>
+
+                    <button class="btn btn-inp-name-level"
+                        style="margin-left:0px; font-size:clamp(8px,1.5vw, 32px);">Ok!</button>
+                </div>
+
+                <form action="#" class="form-opinion" style="width:100%;">
+                    <fieldset>
+                        <legend class="legend-o-part">Оцени мнение Nickname!</legend>
+                        <form action="#" class="form-ask">
+                            <fieldset class="confidence-fieldset">
+                                <legend class="legend-importance-part" style="font-size:clamp(8px,1.5vw, 48px);">Оцени
+                                    значение вопроса для Nickname</legend>
+                                <div class="wrap_input_range" id="wrap_input_range">
+                                    <div class="tbontb"
+                                        style="max-height:55px; background: linear-gradient(to right, rgb(255,255,255,0.85), rgba(249, 2, 2, 0.85));">
+                                        <p
+                                            style="font-size:clamp(8px,3vw, 48px); color:rgba(3, 53, 53, 0.5); padding-left:10px;">
+                                            Низкое</p>
+                                        <p class="or-17" style="padding-left:20px;"><i
+                                                style="font-size:clamp(8px,3.5vw, 48px); display:inline-block; vertical-align: middle; margin-left:0;">Or</i>
+                                        </p>
+                                        <p
+                                            style="font-size:clamp(8px,3vw, 48px); color: rgba(127, 255, 212, 0.5); padding-right:10px;">
+                                            Высокое</p>
+                                    </div>
+
+                                    <form action="#" class="form-color">
+                                        <input type="range" class="input_color color_17" id="color_17" min="0" max="256"
+                                            value="128">
+                                    </form>
+
+                                </div>
+
+                            </fieldset>
+                        </form>
+
+                        <form action="#" class="form-ask">
+                            <fieldset class="confidence-fieldset">
+                                <legend class="legend-positive-part" style="font-size:clamp(8px,1.5vw, 48px);">Оцени
+                                    важность положительного решения для Nickname</legend>
+                                <div class="wrap_input_range" id="wrap_input_range">
+                                    <div class="tbontb"
+                                        style="max-height:55px; background: linear-gradient(to left, rgb(255,255,255,0.85), rgba(0, 0, 0, 0.85));">
+                                        <p
+                                            style="font-size:clamp(8px,3vw, 48px); color:rgba(3, 53, 53, 0.5); padding-left:10px;">
+                                            Не важно</p>
+                                        <p class="or-18" style="padding-left:20px;"><i
+                                                style="font-size:clamp(8px,3.5vw, 48px); display:inline-block; vertical-align: middle; margin-left:0;">Or</i>
+                                        </p>
+                                        <p
+                                            style="font-size:clamp(8px,3vw, 48px); color: rgba(127, 255, 212, 0.5); padding-right:10px;">
+                                            Важно</p>
+                                    </div>
+
+                                    <form action="#" class="form-color">
+                                        <input type="range" class="input_color color_18" id="color_18" min="0" max="256"
+                                            value="128">
+                                    </form>
+
+                                </div>
+
+                            </fieldset>
+                        </form>
+
+                        <form action="#" class="form-ask">
+                            <fieldset class="confidence-fieldset">
+                                <legend class="legend-сompetence-part" style="font-size:clamp(8px,1.5vw, 48px);">Оцени
+                                    компетентность Nickname</legend>
+                                <div class="wrap_input_range" id="wrap_input_range">
+                                    <div class="tbontb"
+                                        style="max-height:55px; background: linear-gradient(to right, rgb(255,255,255,0.85), rgba(0, 256, 0, 0.85));">
+                                        <p
+                                            style="font-size:clamp(8px,3vw, 48px); color:rgba(3, 53, 53, 0.5); padding-left:10px;">
+                                            Низкая</p>
+                                        <p class="or-19" style="padding-left:20px;"><i
+                                                style="font-size:clamp(8px,3.5vw, 48px); display:inline-block; vertical-align: middle; margin-left:0;">Or</i>
+                                        </p>
+                                        <p
+                                            style="font-size:clamp(8px,3vw, 48px); color: rgba(127, 255, 212, 0.5); padding-right:10px;">
+                                            Высокая</p>
+                                    </div>
+
+                                    <form action="#" class="form-color">
+                                        <input type="range" class="input_color color_19" id="color_19" min="0" max="256"
+                                            value="128">
+                                    </form>
+
+                                </div>
+
+                            </fieldset>
+                        </form>
+
+
+                        <form action="#" class="form-ask">
+                            <fieldset class="confidence-fieldset">
+                                <legend class="legend-ir-part" style="font-size:clamp(8px,1.5vw, 48px);"> Оцени
+                                    противополо́жность интересов Nickname </legend>
+                                <div class="wrap_input_range" id="wrap_input_range">
+                                    <div class="tbontb"
+                                        style="max-height:55px; background: linear-gradient(to right, rgb(255,255,255,0.85), rgba(0, 0, 256, 0.85));">
+                                        <p
+                                            style="font-size:clamp(8px,3vw, 48px); color:rgba(3, 53, 53, 0.5); padding-left:10px;">
+                                            Низкая</p>
+                                        <p class="or-20" style="padding-left:20px;"><i
+                                                style="font-size:clamp(8px,3.5vw, 48px); display:inline-block; vertical-align: middle; margin-left:0;">Or</i>
+                                        </p>
+                                        <p
+                                            style="font-size:clamp(8px,3vw, 48px); color: rgba(127, 255, 212, 0.5); padding-right:10px;">
+                                            Высокая</p>
+                                    </div>
+
+                                    <form action="#" class="form-color">
+                                        <input type="range" class="input_color color_20" id="color_20" min="0" max="256"
+                                            value="128">
+                                    </form>
+
+                                </div>
+
+                            </fieldset>
+
+                        </form>
+                        <button class="btn add-part"
+                            style="margin-left:20px; margin-top:20px; float:right; font-size:clamp(8px,1.5vw, 32px);">Следующий
+                            участник &#9658</button>
+                        <button class="btn analiz-part"
+                            style="margin-left:20px; margin-top:20px; float:right; font-size:clamp(8px,1.5vw, 32px);">Анализировать!</button>
+                        <button class="btn previous-part"
+                            style="margin-left:0; margin-top:20px; float:right; font-size:clamp(8px,1.5vw, 32px);">&#9668
+                            Предыдущий участник</button>
+
+
+                    </fieldset>
+
+                </form>
+
+            </div>
+            <!-- АНАЛИЗИРОВАТЬ! -->
+            <div class="conf_analiz none">
+                <div class="answer rez2">
+                    <p style="margin: top 0;">Теплый тон фона этого сообщения - положительный результат
+                        совещания,<br>низкая прозрачность - твердость достигнутых договорённостей.<br><br>Цвет имени
+                        участника - выражение его позиции.<br>Прозрачность определяет его значимость (вес).<br><br>Исключая
+                        участника из обсуждения, кнопкой "(-)",<br> можно оценить степень его влияния на результат.</p>
+                </div>
+                <div class="part_conf">
+
+                </div>
+            </div>
+
+        </div>
+        <right-sidebar>
+            <!-- right-sidebar -->
+        </right-sidebar>
+    </section>
+    <footer style="z-index:1;">
+        <!-- footer -->
+    </footer>
+
+</body>
+<script src="static/js/btn.js"></script>
+<script src="static/js/opinion.js"></script>
+<script src="static/js/conference.js"></script>
+
+</html>
