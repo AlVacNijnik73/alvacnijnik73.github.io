@@ -1,0 +1,365 @@
+:root{
+    --color:128;
+    --pos_or:50vw;
+    --name:"nicname";
+
+    --colorOpRed:128;
+    --ColorOpBlack:128;
+    --ColorOpGreen:128;
+    --ColorOpBlue:128;
+     
+}
+.form-ask{
+    display:flex;
+    
+}
+
+.form-color{
+    display:flex;
+    justify-content:center;
+    align-items:stretch;
+    
+}
+
+fieldset{
+    font-size: 2rem;
+    color:chartreuse;
+    width:100%;
+}
+
+.wrap_input_range{
+    display:flex;
+    flex-direction:column;
+    background: linear-gradient(to right, rgb(255,255,255,0.85), rgb(0,0,0,0.85));
+    justify-content:center;
+    align-items:stretch;
+   
+    /* Свечение блока */
+    -moz-box-shadow:0 0 20px #000;
+    -webkit-box-shadow:0 0 20px #000;
+    box-shadow:0 0 20px #000;
+
+}
+.tbontb{
+    display:flex;
+    flex-direction:row;
+    color:rgb(43, 208, 226);
+    justify-content:space-between;
+    align-items:center;
+    font-size:2rem;
+    -webkit-text-stroke-color:cyan;
+    -webkit-text-stroke-width: 0.25px;
+ 
+}
+
+.color_01{
+    display:flex;
+    align-self:stretch;
+    width:100%;
+}
+/* Стилизация ползунка */
+/* Сброс стилей */
+/* .color_01  {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  } */
+input[type=range].color_01::-webkit-slider-runnable-track {
+    border-radius: 10px/100%;
+    height: 17px;
+    border: 1px solid cyan;
+    background: linear-gradient(to left, rgb(255,255,255,0.85), rgb(0,0,0,0.85));
+    cursor: pointer;
+    
+}
+
+.or{
+    font-family: 'Roboto-BoldItalic';
+    align-self:center;
+    position:relative;
+
+    font-size:4rem;
+
+    color:rgb(var(--color),var(--color),var(--color),0.75);
+
+    -webkit-text-stroke-color:chartreuse;
+    -webkit-text-stroke-width: 0.25px;
+         
+}
+/* QUESTION */
+
+.div-question{
+        /* display:flex; */
+        flex-direction:column;
+        min-height: 50%;
+        font-size:clamp(8px,1.75vw, 48px);
+        color:rgba(128, 255, 0, 0.574);
+        justify-content:stretch;
+        align-items:stretch;
+
+}
+
+.form-question{
+    display:flex;
+    flex-direction:column;
+    height: 100%;
+    
+
+}
+
+
+.question1{
+    display:flex;
+    min-width: 90%;
+    height: 90%;
+    background:none;
+    border:none;
+    font-size:1.5rem;
+    color:rgba(128, 255, 0, 0.574);
+    text-align: center;
+}
+.question1::placeholder{
+    color:rgba(85, 89, 82, 0.5);
+    font-size:clamp(8px,1.5vw, 48px);
+}
+.question1:hover{
+    cursor: pointer;
+}
+.question1:focus{
+    cursor: text;
+}
+.question-fieldset{
+    display:flex;
+    height:100%;
+    /* border:0.05px darkolivegreen;
+    border-style: dotted;
+    border-radius: 5px; */
+    justify-content:center;
+    align-items:center;
+
+}
+input[type=range].color_02::-webkit-slider-runnable-track {
+    /* border-radius: 10px/100%; */
+    height: 17px;
+    /* border: 1px solid cyan; */
+    background: linear-gradient(to left, rgb(255,255,255,0.85), rgb(0,0,0,0.85));
+    cursor: pointer;
+    
+}
+/* CONFIDENCE */
+.or1{
+    font-family: 'Roboto-BoldItalic';
+    align-self:center;
+    position:relative;
+   
+    font-size:4rem;
+
+    color:rgb(var(--color),var(--color),var(--color),0.75);
+
+    -webkit-text-stroke-color:cyan;
+    -webkit-text-stroke-width: 0.25px;
+         
+}
+input[type=range].color_03::-webkit-slider-runnable-track {
+    /* border-radius: 10px/100%; */
+    height: 17px;
+    /* border: 1px solid cyan; */
+    background: linear-gradient(to left, rgb(255,255,255,0.85), rgb(0,0,0,0.85));
+    cursor: pointer;
+    
+}
+
+/* RED */
+.or2{
+    font-family: 'Roboto-BoldItalic';
+    align-self:center;
+    position:relative;
+    
+    font-size:4rem;
+
+    color:rgb(var(--color),0,0,0.75);
+
+    -webkit-text-stroke-color:cyan;
+    -webkit-text-stroke-width: 0.25px;
+         
+}
+.wrap_input_range_red{
+
+    display:flex;
+    flex-direction:column;
+    background: linear-gradient(to right,rgba(255, 0, 0, 0.85),  rgb(255,255,255,0.85));
+    justify-content:center;
+    align-items:stretch;
+   
+    /* Свечение блока */
+    -moz-box-shadow:0 0 20px #000;
+    -webkit-box-shadow:0 0 20px #000;
+    box-shadow:0 0 20px #000;
+
+}
+input[type=range].color_04::-webkit-slider-runnable-track {
+    border-radius: 10px/100%;
+    height: 17px;
+    border: 1px solid cyan;
+    background: linear-gradient(to left, rgb(255,255,255,0.85), rgb(0,0,0,0.85));
+    cursor: pointer;
+    
+}
+/* GREEN */
+.or3{
+    font-family: 'Roboto-BoldItalic';
+    align-self:center;
+    position:relative;
+  
+    font-size:4rem;
+
+    color:rgb(0,var(--color),0,0.75);
+
+    -webkit-text-stroke-color:cyan;
+    -webkit-text-stroke-width: 0.25px;
+         
+}
+
+.wrap_input_range_green{
+
+    display:flex;
+    flex-direction:column;
+    background: linear-gradient(to right,rgba(0, 255, 64, 0.85),  rgb(255,255,255,0.85));
+    justify-content:center;
+    align-items:stretch;
+   
+    /* Свечение блока */
+    -moz-box-shadow:0 0 20px #000;
+    -webkit-box-shadow:0 0 20px #000;
+    box-shadow:0 0 20px #000;
+
+}
+input[type=range].color_05::-webkit-slider-runnable-track {
+    border-radius: 10px/100%;
+    height: 17px;
+    border: 1px solid cyan;
+    background: linear-gradient(to left, rgb(255,255,255,0.85), rgb(0,0,0,0.85));
+    cursor: pointer;
+    
+}
+/* BLUE */
+.or4{
+    font-family: 'Roboto-BoldItalic';
+    align-self:center;
+    position:relative;
+    
+    font-size:4rem;
+
+    color:rgb(0,0,var(--color),0.75);
+
+    -webkit-text-stroke-color:rgb(229, 255, 0);
+    -webkit-text-stroke-width: 0.25px;
+         
+}
+.wrap_input_range_blue{
+
+    display:flex;
+    flex-direction:column;
+    background: linear-gradient(to right,rgba(0, 0, 255, 0.85),  rgb(255,255,255,0.85));
+    justify-content:center;
+    align-items:stretch;
+   
+    /* Свечение блока */
+    -moz-box-shadow:0 0 20px #000;
+    -webkit-box-shadow:0 0 20px #000;
+    box-shadow:0 0 20px #000;
+
+}
+input[type=range].color_06::-webkit-slider-runnable-track {
+    border-radius: 10px/100%;
+    height: 17px;
+    border: 1px solid cyan;
+    background: linear-gradient(to left, rgb(255,255,255,0.85), rgb(0,0,0,0.85));
+    cursor: pointer;
+    
+}
+/* ---------------------------------------- */
+.confidence-fieldset{
+    margin:0;
+    padding:3px;
+}
+
+/* ---------------------Opinion------------ */
+input[type=range].color_07::-webkit-slider-runnable-track {
+    border-radius: 10px/100%;
+    height: 17px;
+    border: 1px solid cyan;
+    background: linear-gradient(to right, rgb(255,255,255,0.85), rgba(256, 0, 0, 0.85));
+    cursor: pointer;
+    
+}
+.or-07{
+    font-family: 'Roboto-BoldItalic';
+    align-self:center;
+    /* position:relative; */
+
+    font-size:4rem;
+
+    color:rgb(var(--colorOpRed),0,0);
+
+    -webkit-text-stroke-color:chartreuse;
+    -webkit-text-stroke-width: 0.25px;
+         
+}
+/* ----------------- */
+input[type=range].color_08::-webkit-slider-runnable-track {
+    border-radius: 10px/100%;
+    height: 17px;
+    border: 1px solid cyan;
+    background: linear-gradient(to left, rgb(255,255,255,0.85), rgba(0, 0, 0, 0.85));
+    cursor: pointer;
+    
+}
+.or-08{
+    font-family: 'Roboto-BoldItalic';
+    align-self:center;
+    /* position:relative; */
+    font-size:4rem;
+    color:rgb(var(--colorOpBlack),var(--colorOpBlack),var(--colorOpBlack));
+    -webkit-text-stroke-color:chartreuse;
+    -webkit-text-stroke-width: 0.25px;
+         
+}
+/* ___________________________ */
+input[type=range].color_09::-webkit-slider-runnable-track {
+    border-radius: 10px/100%;
+    height: 17px;
+    border: 1px solid cyan;
+    background: linear-gradient(to right, rgb(255,255,255,0.85), rgba(0, 255, 0, 0.85));
+    cursor: pointer;
+    
+}
+.or-09{
+    font-family: 'Roboto-BoldItalic';
+    align-self:center;
+    /* position:relative; */
+    font-size:4rem;
+    color:rgb(0,var(--colorOpGreen),0);
+    -webkit-text-stroke-color:rgb(68, 0, 255);
+    -webkit-text-stroke-width: 0.25px;
+         
+}
+/* ___________________________ */
+input[type=range].color_10::-webkit-slider-runnable-track {
+    border-radius: 10px/100%;
+    height: 17px;
+    border: 1px solid cyan;
+    background: linear-gradient(to right, rgb(255,255,255,0.85), rgba(0, 0, 255, 0.85));
+    cursor: pointer;
+    
+}
+.or-10{
+    font-family: 'Roboto-BoldItalic';
+    align-self:center;
+    /* position:relative; */
+    font-size:4rem;
+    color:rgb(0,0,var(--colorOpBlue));
+    -webkit-text-stroke-color:rgb(68, 0, 255);
+    -webkit-text-stroke-width: 0.25px;
+         
+}

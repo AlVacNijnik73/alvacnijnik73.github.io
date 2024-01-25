@@ -1,0 +1,268 @@
+.field{
+    display:flex;
+    flex-direction:column;
+    flex-grow:2;
+    flex-shrink:2;
+    justify-content:center;
+    align-items:stretch;
+}
+
+.none{
+    display:none;
+    flex-direction:column;
+}
+
+.flex{
+    display:flex;
+    flex-direction:column;
+}
+
+.div-ask,
+.div-confidence,
+.div-red,
+.div-green,
+.div-blue{
+    /* display:flex; */
+    flex-direction:column;
+    font-size:clamp(8px,1.75vw, 48px);
+    color:rgba(128, 255, 0, 0.574);
+    justify-content:center;
+    align-items:stretch;
+}
+
+.text>p{
+    font-size: clamp(8px,1.75vw, 48px);
+    color:chartreuse;
+    text-align: center;
+    text-shadow:
+        0 -2px 4px chartreuse,
+        0 -4px 8px white,
+        0 -8px 16px yellow,
+        0 -12px 20px orange,
+        0 -16px 28px orangered;
+        -webkit-text-stroke: 1px rgb(25, 0, 255);
+}
+
+.text1>p{
+    font-size: clamp(8px,1.75vw, 48px);
+    line-height: 1.5vw;
+    color:chartreuse;
+    text-align: center;
+    text-shadow:
+        0 -2px 4px chartreuse,
+        0 -4px 8px white,
+        0 -8px 16px rgb(211, 156, 212),
+        0 -12px 20px rgb(167, 91, 181),
+        0 -16px 28px rgb(255, 0, 180);
+        -webkit-text-stroke: 1px rgb(25, 0, 255);
+}
+
+
+.rez{
+    /* height:30%; */
+    width:100%;
+    justify-content:center;
+    align-items:center;
+
+}
+
+
+.rez p {
+     /* Цвет текста */
+    /* color: #000000; */
+    text-align: center;
+    font-size:clamp(8px,3vw, 48px);
+    -webkit-text-stroke: 1px chartreuse; /* Толщина и цвет обводки */
+    /* Толщина и цвет обводки (стандартное свойство) */
+    /* text-stroke: 1px #FFFFFF;  */
+    text-shadow:
+    0 -2px 4px chartreuse,
+    0 -4px 8px white,
+    0 -8px 16px yellow,
+    0 -12px 20px rgb(150, 100, 50),
+    0 -16px 24px rgb(200, 100, 50);
+    -webkit-text-stroke: 1px rgb(25, 0, 255);
+}
+.opinion,
+.conference{
+    flex-direction:column;
+    margin-top:-15vh;
+    /* border:1px dotted ghostwhite; */
+    min-height:87.5vh;
+    min-width:50vw;
+    justify-content:flex-start;
+    align-items:center;
+    
+}
+.inp-name-opinion,
+.inp-name-part{
+    /* min-width:20%; */
+    background:none;
+    color:chartreuse;
+}
+.inp-name-opinion::placeholder{
+    color:rgb(226, 15, 198);
+    font-size:clamp(8px,1vw, 32px);
+    padding-left:8px;
+}
+.inp-name-part::placeholder{
+    color:rgb(226, 15, 198);
+    font-size:clamp(8px,1vw, 32px);
+    padding-left:8px;
+}
+.input-name,
+.input-name-level{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    align-items:center;
+    width: 100%;
+    
+}
+.input-name>p,
+.input-name-level>p{
+    color:chartreuse;
+    margin-right:5px;
+}
+
+
+.div-analiz{
+    flex-direction:row;
+    position: relative;
+    /* background-color: rgb(218, 139, 43, 1); */
+    justify-content:space-between;
+    align-items: center;
+    margin-top:-10vh;
+}
+
+.img-dream{
+    margin:1vw;
+    max-height:50vh;
+    max-width:30vw;
+    
+}
+.svg{
+    min-height:50vh;
+    min-width:30vw;
+    /* background-color: aqua; */
+    
+}
+
+.part{
+    fill: rgb(255, 255, 255);
+    stroke: chartreuse;
+    stroke-width: 8px;
+    
+}
+/* Всплывавющая подсказка на мнение */
+[data-tooltip] {
+    position: relative; /* Относительное позиционирование */ 
+   }
+   [data-tooltip]::after {
+    content: attr(data-tooltip); /* Выводим текст */
+    position: absolute; /* Абсолютное позиционирование */
+    max-width: 40vw; /* Ширина подсказки */
+    left: 0; top: 0; /* Положение подсказки */
+    background: #ddddda; /* Синий цвет фона */
+    color: rgb(255, 0, 180); /* Цвет текста */
+    padding: 0.5em; /* Поля вокруг текста */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Параметры тени */
+    pointer-events: none; /* Подсказка */
+    opacity: 0; /* Подсказка невидима */
+    transition: 1s; /* Время появления подсказки */
+    border-radius: 1vh;
+   } 
+   [data-tooltip]:hover::after {
+    opacity: 1; /* Показываем подсказку */
+    top: 2em; /* Положение подсказки */
+   }
+
+select{
+    min-width:20%;
+    background:none;
+    color:chartreuse;
+    font-size:clamp(8px,1vw, 32px);
+}
+select>option{
+    background:none;
+    background-color:rgb(195, 0, 255);
+    font-size:clamp(8px,1vw, 32px);
+}
+
+/* --------АНАЛИЗИРОВАТЬ!------------- */
+.conf_analiz{
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+
+}
+.answer{
+    display:flex;
+    min-height:30%;
+    width:100%;
+    border:5px inset white;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    margin-bottom:1.5%;
+}
+.part_conf{
+    display:flex;
+    flex-wrap:wrap;
+    height:fit-content;
+}
+.members{
+    display:flex;
+    width:30%;
+}
+
+.rez1{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    margin:5px;
+    max-height:24px;
+}
+
+.rez1 p {
+
+    text-align: center;
+    font-size:clamp(8px,2vw, 36px);
+    -webkit-text-stroke: 1px chartreuse; /* Толщина и цвет обводки */
+
+    text-shadow:
+    0 -2px 4px chartreuse,
+    0 -4px 8px white,
+    0 -8px 16px yellow,
+    0 -12px 20px rgb(150, 100, 50),
+    0 -16px 24px rgb(200, 100, 50);
+    -webkit-text-stroke: 1px rgb(25, 0, 255);
+
+}
+
+.rez2{
+    /* height:30%; */
+    width:100%;
+    justify-content:center;
+    align-items:center;
+
+}
+
+
+.rez2 p {
+     /* Цвет текста */
+    /* color: #000000; */
+    text-align: center;
+    font-size:clamp(8px,2vw, 48px);
+    -webkit-text-stroke: 1px chartreuse; /* Толщина и цвет обводки */
+    /* Толщина и цвет обводки (стандартное свойство) */
+    /* text-stroke: 1px #FFFFFF;  */
+    text-shadow:
+    0 -2px 4px chartreuse,
+    0 -4px 8px white,
+    0 -8px 16px yellow,
+    0 -12px 20px rgb(150, 100, 50),
+    0 -16px 24px rgb(200, 100, 50);
+    -webkit-text-stroke: 1px rgb(25, 0, 255);
+}

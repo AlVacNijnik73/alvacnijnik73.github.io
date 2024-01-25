@@ -1,0 +1,56 @@
+@font-face{
+    font-family:'rubik';
+    src:
+        url(../fonts/RubikDoodleTriangles/RubikDoodleTrianglesRegular.ttf);
+    font-display:block;
+}
+@font-face{
+    font-family:'roboto-bold';
+    src:
+        url(../fonts/roboto/Roboto-Bold.ttf);
+    font-display:block;
+}
+@font-face{
+    font-family:'roboto-bold-italic';
+    src:
+        url(../fonts/roboto/Roboto-BoldItalic.ttf);
+    font-display:block;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'roboto-bold', sans-serif;
+    font-size:16px;
+
+}
+body{
+    height:115vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:stretch;
+     
+}
+
+section{
+    display:flex;
+    flex-grow:1;
+    flex-shrink: 1;
+    justify-content:space-between;
+    align-items:stretch;
+}
+footer{
+    display:flex;
+    height:5%;
+}
+left-sidebar,
+right-sidebar{
+    display:flex;
+    flex-direction:column;
+    flex-basis:19%;
+    flex-grow:0;
+    flex-shrink:1;
+    /* border:0.025px dotted coral */
+}
